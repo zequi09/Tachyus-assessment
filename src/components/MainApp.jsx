@@ -192,11 +192,7 @@ const MainApp = () => {
   const [columns1, setcolumns1] = useState([
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="1"
-        >
+        <label aria-hidden="true" key="1">
           Year
         </label>,
       ],
@@ -204,11 +200,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="2"
-        >
+        <label aria-hidden="true" key="2">
           Month
         </label>,
       ],
@@ -216,11 +208,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="3"
-        >
+        <label aria-hidden="true" key="3">
           wellAPI
         </label>,
       ],
@@ -228,11 +216,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="4"
-        >
+        <label aria-hidden="true" key="4">
           boreID
         </label>,
       ],
@@ -240,11 +224,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="5"
-        >
+        <label aria-hidden="true" key="5">
           compSubId
         </label>,
       ],
@@ -252,11 +232,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="6"
-        >
+        <label aria-hidden="true" key="6">
           BHP
         </label>,
       ],
@@ -264,11 +240,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="7"
-        >
+        <label aria-hidden="true" key="7">
           Oil
         </label>,
       ],
@@ -276,11 +248,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="8"
-        >
+        <label aria-hidden="true" key="8">
           Water
         </label>,
       ],
@@ -288,11 +256,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="9"
-        >
+        <label aria-hidden="true" key="9">
           Gas
         </label>,
       ],
@@ -300,11 +264,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="9"
-        >
+        <label aria-hidden="true" key="9">
           waterInj
         </label>,
       ],
@@ -312,11 +272,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="9"
-        >
+        <label aria-hidden="true" key="9">
           CompL
         </label>,
       ],
@@ -324,11 +280,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="9"
-        >
+        <label aria-hidden="true" key="9">
           FlowDays
         </label>,
       ],
@@ -336,11 +288,7 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="9"
-        >
+        <label aria-hidden="true" key="9">
           Pressure
         </label>,
       ],
@@ -348,15 +296,19 @@ const MainApp = () => {
     },
     {
       label: [
-        <label
-          className="default-text--xs text-color--dt-column"
-          aria-hidden="true"
-          key="9"
-        >
+        <label aria-hidden="true" key="9">
           Status
         </label>,
       ],
       field: "Status",
+    },
+    {
+      label: [
+        <label aria-hidden="true" key="9">
+          Oil + Water
+        </label>,
+      ],
+      field: "OW",
     },
   ]);
 
@@ -454,6 +406,7 @@ const MainApp = () => {
           FlowDays: item.FlowDays,
           Pressure: item.Pressure,
           Status: item.Status,
+          OW: item.Qo + item.Qw,
         };
       });
 
